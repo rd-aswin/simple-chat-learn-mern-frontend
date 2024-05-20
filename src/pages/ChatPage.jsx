@@ -16,7 +16,7 @@ const ChatPage = ({ user }) => {
     // Fetch the last 20 messages from the server
     const fetchMessages = async () => {
         try {
-            const response = await axios.get('https://whatsay-backend.onrender.com/messages');
+            const response = await axios.get('https://appsail-50019403112.development.catalystappsail.in/messages');
             console.log(response);
             setMessages(response.data);
         } catch (error) {
@@ -29,7 +29,7 @@ const ChatPage = ({ user }) => {
 
   useEffect(() => {
     // Connect to the server
-    const newSocket = io("https://whatsay-backend.onrender.com");
+    const newSocket = io("https://appsail-50019403112.development.catalystappsail.in");
     setSocket(newSocket);
 
     // Request permission for notifications
